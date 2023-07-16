@@ -1,0 +1,21 @@
+
+
+
+<div class="card mb-3 my-4" style="max-width: 800px; margin-left:300px; background-color:#b9f0ea;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://static.thenounproject.com/png/2410970-200.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Name :--</strong><%= @user.name %></h5>
+        <p class="card-text"><strong>Email      : -- </strong><%= @user.email %></p>
+        <p class="card-text"><strong>Date of Birth      : -- </strong><%= @user.phone%></p>
+        <p class="card-text"><strong>Age     : -- </strong><%= @user.address %></p>
+
+        <a><%= link_to 'Back', users_path, class: "btn btn-outline-danger me-3" %></a>
+        <a><%= link_to 'Edit', edit_user_path, class: "btn btn-outline-danger" %></a>
+        </div>
+    </div>
+  </div>
+</div>
