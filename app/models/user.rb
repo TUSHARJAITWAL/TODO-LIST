@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    paginates_per 7
+    paginates_per 3
     has_one_attached :profile_image
     validates :name,:email ,presence: true
     validates :email , uniqueness: true

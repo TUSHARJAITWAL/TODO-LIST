@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
     def index
-        @users = User.all.page(params[:page])
+        if params[:search].present?
+            @users = User.where("name LIKE ? OR email LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+        else
+            @users = User.all
+        end
+
+        @users = @users.order(:name).page params[:page]
     end
 
     def new
