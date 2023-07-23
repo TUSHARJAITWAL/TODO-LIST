@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
     def index
-        if params[:search].present?
-            @users = User.where(name: params["search"].capitalize)
-        else
-            @users = User.all
-        end
+        @users = User.all.page(params[:page])
     end
 
     def new
